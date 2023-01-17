@@ -1,8 +1,20 @@
 import React from "react";
+import './Nav.css'
+import logo from '../assets/logo.png';
 
 function Nav(){
     return(
-        <nav></nav>
+        <nav>
+            <ul>
+                <li><img src={logo} alt="logo" id="logo"/></li>
+                <li>Home</li>
+                <li>About</li>
+                <li>Menu</li>
+                <li>Order Online</li>
+                <li>Reservations</li>
+                <li>Login</li>
+            </ul>
+        </nav>
     );
 }
 
