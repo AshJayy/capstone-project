@@ -1,10 +1,11 @@
 import React from "react";
-import logo from "../assets/mono_logo_dark.png"
+import './Footer.css';
+import logo from "../assets/mono_logo_dark.png";
 
 function Footer(){
     return(
         <footer>
-            <ul>
+            <ul id="content-main">
                 <li>
                     <div>
                         <img src={logo} alt="logo"/>

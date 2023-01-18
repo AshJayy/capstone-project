@@ -1,7 +1,12 @@
+nav > ul {
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #logo {
     height: 44px;
 }
 
-ul {
-    list-style: none;
-}

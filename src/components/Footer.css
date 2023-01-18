@@ -1,0 +1,9 @@
+#content-main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
