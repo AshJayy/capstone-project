@@ -5,7 +5,7 @@ import logo from "../assets/mono_logo_dark.png";
 function Footer(){
     return(
         <footer>
-            <ul id="content-main">
+            <ul id="footer-content" className="navul make-dropdown">
                 <li>
                     <div>
                         <img src={logo} alt="logo"/>

@@ -1,9 +1,5 @@
-nav > ul {
-    width: 100%;
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+#header-content {
+    align-content: center;
 }
 
 #logo {

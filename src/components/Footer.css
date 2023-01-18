@@ -1,7 +1,5 @@
-#content-main {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+#footer-content{
+    align-content: flex-start;
 }
 
 ul {

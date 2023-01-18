@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 function Nav(){
     return(
         <nav>
-            <ul>
+            <ul id="header-content" className="make-dropdown navul">
                 <li><img src={logo} alt="logo" id="logo"/></li>
                 <li>Home</li>
                 <li>About</li>
