@@ -1,7 +1,13 @@
-#footer-content{
-    align-content: flex-start;
+#footer-content {
+    align-items: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 67px;
+    font-weight: 500;
 }
 
-ul {
-    list-style: none;
+@media (max-width: 480px) {
+    #footer-content{
+        position: relative;
+    }
 }

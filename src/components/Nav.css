@@ -1,5 +1,8 @@
 #header-content {
-    align-content: center;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 0px;
+    gap: 36px;
 }
 
 #logo {

@@ -17,18 +17,112 @@ code {
   grid-template-rows: "1fr auto 1fr";
 }
 
-.navul {
-  width: 100%;
-    list-style: none;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
+h1 {
+  font-family: 'title';
+  font-style: normal;
+  font-size: 64px;
+  line-height: 77px;
 }
 
+h2 {
+  font-family: 'subtitle';
+  font-style: normal;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-family: 'section-title';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+h4, button, .card-title {
+  font-family: 'card-title';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+h5 {
+  font-family: 'highlight-text';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+p, body {
+  font-family: 'paragraph-text';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+ul, li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.navul {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 @media (max-width: 480px) {
   .make-dropdown {
       flex-direction: column;
       position: absolute;
   }
+}
+
+
+/*fonts*/
+@font-face {
+  font-family: title;
+  src: url("assets/fonts/MarkaziText-Medium.ttf");
+}
+
+@font-face {
+  font-family: subtitle;
+  src: url("assets/fonts/MarkaziText-Regular.ttf");
+}
+
+@font-face {
+  font-family: section-title;
+  src: url("assets/fonts/Karla-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: card-title;
+  src: url("assets/fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: highlight-text;
+  src: url("assets/fonts/Karla-Medium.ttf");
+}
+
+@font-face {
+  font-family: paragraph-text;
+  src: url("assets/fonts/Karla-Regular.ttf");
+}
+
+/*colors*/
+.primary-dark {
+  color: hsl(160, 13%, 33%);
+}
+.bg-primary-dark {
+  background-color: hsl(160, 13%, 33%);
+}
+
+.primary-light {
+  color: hsl(150, 6%, 93%);
+}
+
+.highlight-dark {
+  color: hsl(0, 0%, 20%);
 }
