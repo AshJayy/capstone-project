@@ -1,6 +1,6 @@
 import React from "react";
 import './Footer.css';
-import logo from "../assets/mono_logo_dark.png";
+import logo from "../assets/logos/mono_logo_dark.png";
 
 function Footer(){
     return(
