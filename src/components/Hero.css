@@ -1,0 +1,32 @@
+#hero {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 3rem;
+}
+
+#hero div:first-of-type {
+    grid-column: 2/ span 4;
+}
+
+#hero div div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.5rem;
+}
+
+#hero div:last-of-type {
+    grid-column: 8;
+}
+
+#hero img {
+    width: 30vw;
+    position: absolute;
+    border-radius: 16px;
+}
+
+#hero button {
+    margin-top: 2rem;
+}

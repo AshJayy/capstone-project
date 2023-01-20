@@ -3,9 +3,7 @@ import './Nav.css'
 import logo from '../assets/logos/logo.png';
 import { Link } from "react-router-dom";
 
-import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Reservations from "./Reservations";
+
 
 function Nav(){
     return(
@@ -19,10 +17,7 @@ function Nav(){
                 <li><Link to="/Reservations">Reservations</Link></li>
                 <li>Login</li>
             </ul>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Reservations" element={<Reservations />} />
-            </Routes>
+            
         </nav>
     );
 }
