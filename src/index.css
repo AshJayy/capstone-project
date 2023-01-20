@@ -116,29 +116,11 @@ button {
 }
 
 @font-face {
-  font-family: subtitle;
-  src: url("assets/fonts/MarkaziText-Regular.ttf");
-}
-
-@font-face {
-  font-family: section-title;
-  src: url("assets/fonts/Karla-ExtraBold.ttf");
-}
-
-@font-face {
   font-family: "text";
   src: url("assets/fonts/Karla-Regular.ttf");
 }
 
-@font-face {
-  font-family: highlight-text;
-  src: url("assets/fonts/Karla-Medium.ttf");
-}
 
-@font-face {
-  font-family: paragraph-text;
-  src: url("assets/fonts/Karla-Regular.ttf");
-}
 
 /*colors*/
 .primary-dark {
