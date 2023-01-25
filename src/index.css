@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,8 +28,9 @@ h1 {
   font-family: 'title';
   font-style: normal;
   font-size: 64px;
-  line-height: 77px;
+  line-height: 50px;
   font-weight: 500;
+  overflow-y: hidden;
 }
 
 h2 {
@@ -62,7 +63,7 @@ h5 {
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 p, body {
@@ -101,6 +102,13 @@ ul a:visited {
   }
 }
 
+section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 3rem;
+}
+
 button {
   background: hsl(50, 91%, 52%);
   border-radius: 16px;
@@ -132,6 +140,10 @@ button {
 
 .primary-light {
   color: hsl(150, 6%, 93%);
+}
+
+.bg-primary-light {
+  background-color: hsl(150, 6%, 93%);
 }
 
 .highlight-dark {

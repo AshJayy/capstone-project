@@ -4,8 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Reservations from "./Reservations";
 
-import './Main.css'
-
 function Main(){
     return(
         <>
