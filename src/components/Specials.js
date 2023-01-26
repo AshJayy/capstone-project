@@ -39,7 +39,7 @@ function Specials(){
     })
 
     return(
-        <section id="reviews">
+        <section id="specials">
             <div>
                 <div>
                     <h1>This week's specials!</h1>
