@@ -31,7 +31,7 @@ function Specials(){
                     </div>
                     <div>
                         <h5>Order a delivery</h5>
-                        <Chevron />
+                        <Chevron width="1em" height="1em" />
                     </div>
                 </div>
             </article>
