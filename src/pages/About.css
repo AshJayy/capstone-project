@@ -1,0 +1,23 @@
+#about {
+    align-content: space-around;
+}
+
+#about div:first-of-type {
+    grid-column: 2/ span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px;
+    gap: 0.5rem;
+}
+
+#about div:last-of-type {
+    grid-column: 7/ 12;
+    width: fit-content;
+}
+
+#about img {
+    width: 40vw;
+}
+
