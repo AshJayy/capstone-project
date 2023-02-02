@@ -1,0 +1,11 @@
+.unavailable {
+    background-color: hsl(150, 6%, 93%);
+}
+
+.available {
+    background-color: hsl(50, 91%, 52%);
+}
+
+.active {
+    background-color: hsl(97, 57%, 54%);
+}

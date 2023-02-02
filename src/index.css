@@ -153,3 +153,7 @@ button {
 .highlight-light {
   color: hsl(50, 91%, 52%);
 }
+
+.bg-highlight-light {
+  background-color: hsl(50, 91%, 52%);
+}
