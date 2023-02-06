@@ -1,0 +1,70 @@
+{
+    "tables" : [
+        {
+            "no" : "01",
+            "headCount" : 4,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "02",
+            "headCount" : 4,
+            "available": false,
+            "type" : "s"
+        },
+        {
+            "no" : "03",
+            "headCount" : 6,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "04",
+            "headCount" : 4,
+            "available": false,
+            "type" : "s"
+        },
+        {
+            "no" : "05",
+            "headCount" : 4,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "06",
+            "headCount" : 6,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "07",
+            "headCount" : 10,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "08",
+            "headCount" : 4,
+            "available": false,
+            "type" : "c"
+        },
+        {
+            "no" : "09",
+            "headCount" : 6,
+            "available": true,
+            "type" : "s"
+        },
+        {
+            "no" : "10",
+            "headCount" : 4,
+            "available": true,
+            "type" : "c"
+        },
+        {
+            "no" : "11",
+            "headCount" : 4,
+            "available": true,
+            "type" : "c"
+        }
+    ]
+}

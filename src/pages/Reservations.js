@@ -5,14 +5,14 @@ import Tables from "./Reservations/Tables"
 
 function Reservations(){
     return(
-        <>
+        <div className="bg-primary-dark">
             <h1>Reservations</h1>
             <section>
                 <Specification />
                 <Tables />
                 <Details />
             </section>
-        </>
+        </div>
     );
 }
 

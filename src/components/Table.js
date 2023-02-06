@@ -5,21 +5,24 @@ import './Table.css';
 
 function Table(props) {
 
-    const [active, setActive] = useState(false);
-    const [edge, setEdge] = useState("")
+    // const [active, setActive] = useState(false);
     const [tableClass, setTableClass] = useState("available")
 
-    props.type == "circle" ? setEdge("50%") : setEdge("0.5rem");
+    var edge = props.type === "c" ? "50%" : "1rem";
 
     const styles = {
-        gridColumn: props.width,
-        gridRow: props.height,
-        borderRadius: edge
+        borderRadius: edge,
+        gridColumn: props.col,
+        gridRow: props.row,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
        };
 
+
     const toggleActive = () => {
-    active ? setActive(false) : setActive(true);
-    active ? setTableClass("active") : setTableClass("available");
+    // active ? setActive(false) : setActive(true);
+    tableClass === "available" ? setTableClass("active") : setTableClass("available");
     }
 
     const TableDiv = () => {
@@ -30,8 +33,10 @@ function Table(props) {
                     style={styles}
                     className={tableClass}
                     onClick={toggleActive}
+                    value = {props.value}
                 >
-                    {active && <Check />}
+                    {props.key}
+                    {tableClass === "active" && <Check />}
                 </div>
             );
         } else {
@@ -40,7 +45,7 @@ function Table(props) {
                     key={props.key}
                     style={styles}
                     className={"unavailable"}
-                ></div>
+                >{props.key}</div>
             )
         }
     }
