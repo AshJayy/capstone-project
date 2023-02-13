@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import {ReactComponent as Check} from '../assets/icons/roundCheck.svg';
-import './Table.css';
+import {ReactComponent as Check} from '../../../assets/icons/roundCheck.svg';
 
 function Table(props) {
 
     // const [active, setActive] = useState(false);
-    const [tableClass, setTableClass] = useState("available")
+    const [tableClass, setTableClass] = useState("bg-highlight-light")
 
     var edge = props.type === "c" ? "50%" : "1rem";
 
@@ -22,7 +21,7 @@ function Table(props) {
 
     const toggleActive = () => {
     // active ? setActive(false) : setActive(true);
-    tableClass === "available" ? setTableClass("active") : setTableClass("available");
+    tableClass === "bg-highlight-light" ? setTableClass("active") : setTableClass("bg-highlight-light");
     }
 
     const TableDiv = () => {
@@ -44,7 +43,7 @@ function Table(props) {
                 <div
                     key={props.key}
                     style={styles}
-                    className={"unavailable"}
+                    className={"bg-primary-light"}
                 >{props.key}</div>
             )
         }

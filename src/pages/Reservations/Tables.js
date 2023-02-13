@@ -1,6 +1,6 @@
 import React from "react";
 import { useState , useEffect } from "react";
-import Table from "../../components/Table";
+import Table from "./components/Table";
 import './Tables.css';
 
 function Tables() {
@@ -49,7 +49,7 @@ function Tables() {
 
     return(
         <div id="tables">
-            <h3>Pick a table</h3>
+            <h3 className="white" >Pick a table</h3>
             <div>
                 {tableStructure}
             </div>

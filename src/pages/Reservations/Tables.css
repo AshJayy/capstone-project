@@ -2,7 +2,13 @@
     grid-column: 5 /span 4;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 3rem;
+    padding-top: 2rem;
+}
+
+#tables h3 {
+    align-self: center;
 }
 
 #tables > div {
@@ -13,3 +19,6 @@
     margin: 3rem;
 }
 
+.active {
+    background-color: hsl(97, 57%, 54%);
+}

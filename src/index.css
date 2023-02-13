@@ -157,3 +157,16 @@ button {
 .bg-highlight-light {
   background-color: hsl(50, 91%, 52%);
 }
+
+.white {
+  color: hsl(0, 0%, 100%);
+}
+
+.bg-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.black {
+  color: hsl(0, 0%, 0%);
+}
+
