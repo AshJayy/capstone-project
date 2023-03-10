@@ -1,10 +1,19 @@
 import React from "react";
 import { useState } from "react";
-import { DateTime } from "luxon";
 
-function Date(){
+function Date(props){
 
-    const DateCard = (props) => {
+    const styleMain = {
+        width: "fit-content",
+        display: "flex",
+        gap: "1em",
+    }
+
+    const styleScroll = {
+        "overflow-x": "scroll"
+    }
+
+    const DateCard = (p) => {
 
         const [cardColor, setCardColor] = useState("bg-primary-light primary-dark")
 
@@ -23,6 +32,9 @@ function Date(){
             cardColor === "bg-primary-light primary-dark" ?
                 setCardColor("bg-highlight-light black") :
                 setCardColor("bg-primary-light primary-dark")
+            props.set.setDate(prev => {
+                return {...prev, month:p.month, date: p.date}
+            })
         }
 
         return(
@@ -32,17 +44,15 @@ function Date(){
                 className={cardColor}
                 onClick={handleClick}
             >
-                <p>{props.month}</p>
-                <h4>{props.date}</h4>
-                <p>{props.day}</p>
+                <p>{p.month}</p>
+                <h4>{p.date}</h4>
+                <p>{p.day}</p>
             </div>
         );
     }
 
-    const currentDate = DateTime.now();
-
     const cards = [...new Array(7)].map((a, i) => {
-            const d = currentDate.plus({days: i});
+            const d = props.current.plus({days: i});
             return(
                 <DateCard
                     key={i}
@@ -53,21 +63,15 @@ function Date(){
             );
         });
 
-        const styleMain = {
-            width: "fit-content",
-            display: "flex",
-            gap: "1em",
-        }
-
-        const styleScroll = {
-            "overflow-x": "scroll"
-        }
-
-
     return(
-        <div style={styleScroll}>
-            <div style={styleMain}>
-                {cards}
+        <div>
+            <span>
+                <h4>Pick a date</h4>
+            </span>
+            <div style={styleScroll}>
+                <div style={styleMain}>
+                    {cards}
+                </div>
             </div>
         </div>
     );

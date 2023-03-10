@@ -50,7 +50,7 @@ h3 {
   text-transform: uppercase;
 }
 
-h4, button, .card-title {
+h4, button, .card-title, .dropdown {
   font-family: 'text';
   font-style: normal;
   font-size: 18px;
@@ -93,6 +93,55 @@ ul a:visited {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.dropdown {
+  width: fit-content;
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown-btn {
+  padding: 1em .5em;
+  background: hsl(150, 6%, 93%);
+  border-radius: 0px 8px 8px 0px;
+}
+
+.dropdown-selected {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid hsl(150, 6%, 93%);
+  border-radius: 8px 0px 0px 8px;
+  padding: 1em;
+}
+
+.dropdown-cnt {
+  position: absolute;
+  width: 100%;
+  top : 110%;
+  left: 0;
+  filter: drop-shadow(1px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dropdown-cnt .dropdown-item {
+  padding: 1em;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(150, 6%, 93%);
+  border-bottom: 0;
+}
+
+.dropdown-cnt .dropdown-item:last-of-type {
+  border-bottom: 1px solid hsl(150, 6%, 93%);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.dropdown-item:first-of-type {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 480px) {

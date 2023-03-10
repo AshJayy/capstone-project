@@ -32,8 +32,6 @@ function Tables() {
 
         const [col, row] = dimensions["t" + table.no + table.type]
 
-        console.log(col, row);
-
         return(
             <Table
                 key={table.no}
