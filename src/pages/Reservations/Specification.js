@@ -18,7 +18,8 @@ function Specification() {
 
     const [time, setTime] = useState({
         hours: "",
-        min: ""
+        min: "",
+        ampm: ""
     })
 
     const [persons, setPersons] = useState(4);

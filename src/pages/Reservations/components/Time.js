@@ -1,8 +1,18 @@
 import React from "react";
-import { useEffect, useMemo} from "react";
+import { useEffect, useMemo, useState} from "react";
 import DropDown from "../../../components/DropDown";
 
 function Time(props){
+
+    const dropdownBtn = {
+        background: "hsl(150, 6%, 93%)",
+        borderRadius: "0px 8px 8px 0px"
+    }
+
+    const dropdownSelected = {
+        border: "1px solid hsl(150, 6%, 93%)",
+        borderRadius: "8px 0px 0px 8px"
+    }
 
     const [current, time, setTime] = [props.current, props.set.time, props.set.setTime];
 
@@ -36,6 +46,33 @@ function Time(props){
         });
     }, [minutes]);
 
+    const AmPm = () => {
+
+        const [apClass, setApClass] = useState("toggle down");
+
+        const ampmClick = () => {
+
+            if(apClass === "toggle down"){
+                setApClass("toggle up");
+                setTime((prev) => {
+                    return {...prev, ampm: "am"};
+                });
+            }else{
+                setApClass("toggle down");
+                setTime((prev) => {
+                    return {...prev, ampm: "pm"};
+                });
+            };
+        };
+
+        return(
+            <div className={apClass} onClick={ampmClick}>
+                <div><h4>am</h4></div>
+                <div><h4>pm</h4></div>
+                <div className="btn"></div>
+            </div>
+        );
+    }
 
     return(
         <div id="time">
@@ -46,6 +83,8 @@ function Time(props){
                 <DropDown
                     options={minutes}
                     selectedOp={time.min}
+                    styleBtn = {dropdownBtn}
+                    styleSel = {dropdownSelected}
                     handleClick={(min) => {
                         setTime(prev => {
                             return {...prev, min: min}
@@ -54,6 +93,8 @@ function Time(props){
                 />
                 <DropDown
                     options={hours}
+                    styleBtn = {dropdownBtn}
+                    styleSel = {dropdownSelected}
                     selectedOp={time.hour}
                     handleClick={(hour) => {
                         setTime(prev => {
@@ -61,6 +102,7 @@ function Time(props){
                         });
                     }}
                 />
+                <AmPm />
             </div>
         </div>
     );

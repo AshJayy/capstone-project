@@ -18,6 +18,117 @@
     gap: 1em;
 }
 
-#time {
+#time > div {
     overflow-y: visible;
+    display: flex;
+    justify-content: space-between;
+}
+
+#time .dropdown-cnt .dropdown-item {
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(150, 6%, 93%);
+}
+
+#time .dropdown-cnt .dropdown-item:last-of-type {
+    border-bottom: 1px solid hsl(150, 6%, 93%);
+    border-radius: 0px 0px 8px 8px;
+}
+
+#time .dropdown-cnt .dropdown-item:first-of-type {
+    border-radius: 8px 8px 0px 0px;
+}
+
+#time .toggle {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#time .toggle div{
+    width: 3em;
+    padding: .25em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(160, 13%, 33%);
+    color: hsl(150, 6%, 93%);
+}
+
+#time .toggle div:first-of-type{
+    border-radius: 8px 8px 0 0;
+}
+#time .toggle div:nth-of-type(2){
+    border-radius: 0 0 8px 8px;
+}
+
+#time .toggle h4 {
+    z-index: 100;
+}
+
+#time .toggle .btn {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    border-radius: 8px;
+    background-color: hsl(50, 91%, 52%);
+}
+
+#time .toggle.down .btn {
+    animation: down 0.5s linear forwards;
+}
+@keyframes down {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    100%{
+        top: 50%;
+        left: 0;
+    }
+}
+
+#time .toggle.down div:nth-of-type(2) {
+    animation: txtColorDark 0.5s ease-out forwards;
+    border-radius: 0 0 10px 10px;
+}
+
+#time .toggle.down div:nth-of-type(1) {
+    animation: txtColorDark 0.5s ease-out reverse;
+}
+
+#time .toggle.up .btn {
+    animation: up 0.5s linear forwards;
+}
+@keyframes up {
+    0%{
+        top: 50%;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+#time .toggle.up div:nth-of-type(1) {
+    animation: txtColorDark 0.5s ease-out forwards;
+    border-radius: 10px 10px 0 0;
+}
+
+#time .toggle.up div:nth-of-type(2) {
+    animation: txtColorDark 0.5s ease-in reverse;
+}
+
+@keyframes txtColorDark {
+    0%{
+        color: hsl(150, 6%, 93%);
+    }
+    100%{
+        color: hsl(0, 0%, 20%);
+    }
 }

@@ -103,15 +103,14 @@ ul a:visited {
 
 .dropdown-btn {
   padding: 1em .5em;
-  background: hsl(150, 6%, 93%);
-  border-radius: 0px 8px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .dropdown-selected {
   position: relative;
   box-sizing: border-box;
-  border: 1px solid hsl(150, 6%, 93%);
-  border-radius: 8px 0px 0px 8px;
   padding: 1em;
 }
 
@@ -125,18 +124,7 @@ ul a:visited {
 
 .dropdown-cnt .dropdown-item {
   padding: 1em;
-  background-color: hsl(0, 0%, 100%);
-  border: 1px solid hsl(150, 6%, 93%);
   border-bottom: 0;
-}
-
-.dropdown-cnt .dropdown-item:last-of-type {
-  border-bottom: 1px solid hsl(150, 6%, 93%);
-  border-radius: 0px 0px 8px 8px;
-}
-
-.dropdown-item:first-of-type {
-  border-radius: 8px 8px 0px 0px;
 }
 
 .flex-row {
