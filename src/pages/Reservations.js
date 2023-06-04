@@ -1,7 +1,6 @@
 import React from "react";
 import Details from "./Reservations/Details";
 import Specification from "./Reservations/Specification"
-import Tables from "./Reservations/Tables"
 
 function Reservations(){
     return(

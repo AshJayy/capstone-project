@@ -1,11 +1,12 @@
 #specif {
-    grid-column: 1 /span 4;
+    grid-column: 2 /span 4;
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 90vh;
 }
 
 #specif > div{
@@ -16,6 +17,7 @@
     display: flex;
     align-items: flex-start;
     gap: 1em;
+    padding-bottom: 1em;
 }
 
 #time > div {
