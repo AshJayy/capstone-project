@@ -4,7 +4,7 @@ import { ReactComponent as DropIc} from '../assets/icons/chevron.svg'
 
 function DropDown(props){
 
-    //props: options, handleClick, styles - styleSel, styleBtn, selectedOp
+    //props: options, handleClick, styles - styleSel, styleBtn, colorBtn, selectedOp
 
     const [isActive, setIsActive] = useState(false);
 
@@ -22,6 +22,11 @@ function DropDown(props){
         );
     })
 
+    const styleIcon = {
+        color: props.colorBtn,
+        transform: "matrix(0, 1, 1, 0, 0, 0)"
+    }
+
     return(
         <div className="dropdown">
             <div className="flex-row">
@@ -33,7 +38,7 @@ function DropDown(props){
                     style={props.styleBtn}
                     onClick={() => {setIsActive(!isActive);}}
                 >
-                    <DropIc width="1em" height="1em" style={{transform: "matrix(0, 1, 1, 0, 0, 0)"}} />
+                    <DropIc width="1em" height="1em" fill={props.colorBtn} style={styleIcon} />
                 </div>
             </div>
             {isActive && (

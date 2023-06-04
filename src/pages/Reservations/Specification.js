@@ -5,6 +5,7 @@ import { useState } from "react";
 import Date from "./components/Date";
 import Time from "./components/Time";
 import Persons from "./components/Persons";
+import Occasion from "./components/Occasion";
 
 
 function Specification() {
@@ -39,6 +40,7 @@ function Specification() {
             <Persons
                 set = {{persons, setPersons}}
             />
+            <Occasion />
         </div>
     );
 }

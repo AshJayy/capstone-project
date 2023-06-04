@@ -9,8 +9,8 @@ function Reservations(){
             <h1>Reservations</h1>
             <section>
                 <Specification />
-                <Tables />
                 <Details />
+                <Tables />
             </section>
         </div>
     );
