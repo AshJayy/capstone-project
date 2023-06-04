@@ -10,7 +10,6 @@ function Reservations(){
             <section>
                 <Specification />
                 <Details />
-                <Tables />
             </section>
         </div>
     );
