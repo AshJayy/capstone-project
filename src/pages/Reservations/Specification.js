@@ -1,14 +1,14 @@
 import React from "react";
 import './Specification.css'
 import { DateTime } from "luxon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Date from "./components/Date";
 import Time from "./components/Time";
 import Persons from "./components/Persons";
 import Occasion from "./components/Occasion";
 
 
-function Specification() {
+function Specification(props) {
 
     const current = DateTime.now();
 
@@ -24,6 +24,14 @@ function Specification() {
     })
 
     const [persons, setPersons] = useState(4);
+
+    useEffect(() => {
+        if ((date.month !== "" &&
+        date.date !== "" &&
+        time.hours !== "" &&
+        time.min !== "" &&
+        time.ampm !== "")) {props.setSpecif(true);}
+    }, [date, time, persons, props])
 
 
     return(

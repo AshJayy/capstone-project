@@ -1,0 +1,40 @@
+#details {
+    grid-column: 7 /span 4;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+
+#details > div {
+    width: 100%;
+}
+
+#details-input{
+    box-sizing: border-box;
+    padding: 4em 0 4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    height: 100%;
+}
+
+#details lable p {
+    padding: 0 0 .5em 1em;
+}
+
+#details input {
+    box-sizing: border-box;
+    border: 0;
+    padding: 1em;
+    background-color: hsl(150, 6%, 93%);
+    border-radius: 8px;
+    width: 100%;
+}
+
+#details button:disabled{
+    opacity: 50%;
+}
