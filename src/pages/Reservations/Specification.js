@@ -25,12 +25,15 @@ function Specification(props) {
 
     const [persons, setPersons] = useState(4);
 
+    const [occasion, setOccasion] = useState("");
+
     useEffect(() => {
         if ((date.month !== "" &&
         date.date !== "" &&
         time.hours !== "" &&
         time.min !== "" &&
-        time.ampm !== "")) {props.setSpecif(true);}
+        time.ampm !== "" &&
+        persons != null)) {props.setSpecif(true);}
     }, [date, time, persons, props])
 
 
@@ -48,7 +51,9 @@ function Specification(props) {
             <Persons
                 set = {{persons, setPersons}}
             />
-            <Occasion />
+            <Occasion
+                set = {{occasion, setOccasion}}
+            />
         </div>
     );
 }

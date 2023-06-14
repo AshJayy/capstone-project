@@ -20,7 +20,7 @@ function Time(props){
     const [hOpen, hClosed] = [8, 22]
     var hours = [];
 
-
+    useEffect(() => {
         var t;
         if(current.hour < hOpen) {
             t = hOpen;
@@ -34,12 +34,14 @@ function Time(props){
             hours.push(""+t);
         }
 
+        console.log(hours);
+
         setTime(prev => {
             return {...prev, hour : hours[0]}
         })
+    }, [current.hour])
 
 
-    console.log(hours);
 
     useEffect(() => {
         setTime(prev => {
@@ -48,6 +50,35 @@ function Time(props){
     }, [minutes]);
 
     const [apClass, setApClass] = useState("toggle down");
+
+    // const AmPm = useMemo(
+    //     () => {
+
+    //         const ampmClick = () => {
+    //             if(apClass === "toggle down"){
+    //                 setApClass("toggle up");
+    //                 console.log("up");
+    //                 setTime((prev) => {
+    //                     return {...prev, ampm: "am"};
+    //                 });
+    //             }else{
+    //                 setApClass("toggle down");
+    //                 console.log("down");
+    //                 setTime((prev) => {
+    //                     return {...prev, ampm: "pm"};
+    //                 });
+    //             };
+    //         };
+
+    //         return(
+    //             <div className={apClass} onClick={ampmClick}>
+    //                 <div><h4>am</h4></div>
+    //                 <div><h4>pm</h4></div>
+    //                 <div className="btn"></div>
+    //             </div>
+    //         );
+    //     }
+    // , [apClass, setTime]);
 
     const AmPm = () => {
 

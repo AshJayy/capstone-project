@@ -1,9 +1,12 @@
 import React from "react";
 import DropDown from "../../../components/DropDown";
 
-function Occasion(){
+function Occasion(props){
 
     const occasionNames = ["None", "Anniversary", "Birthday", "Other"]
+    props.set.setOccasion(occasionNames[0]);
+
+    console.log(props.set.occasion);
 
     const styleSel = {
         background: "hsl(150, 6%, 93%)",
@@ -29,8 +32,9 @@ function Occasion(){
                 options={occasionNames}
                 styleSel={styleSel}
                 styleBtn={styleBtn}
-                selectedOp={occasionNames[0]}
+                selectedOp={props.set.occasion}
                 colorBtn="hsl(160, 13%, 33%)"
+                handleClick={(occ) => {props.set.setOccasion(occ)}}
             />
         </div>
     );
