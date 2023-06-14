@@ -15,8 +15,9 @@ function DropDown(props){
                 key={i}
                 className="dropdown-item"
                 onClick={() => {
+                    console.log("active");
                     props.handleClick(op);
-                    setIsActive(false)
+                    setIsActive(false);
                 }}
             >{op}</div>
         );
@@ -36,7 +37,8 @@ function DropDown(props){
                 <div
                     className="dropdown-btn"
                     style={props.styleBtn}
-                    onClick={() => {setIsActive(!isActive);}}
+                    onClick={() => {setIsActive(!isActive);
+                    console.log("set active");}}
                 >
                     <DropIc width="1em" height="1em" fill={props.colorBtn} style={styleIcon} />
                 </div>

@@ -20,8 +20,7 @@ function Time(props){
     const [hOpen, hClosed] = [8, 22]
     var hours = [];
 
-    useEffect(() => {
-        hours = [];
+
         var t;
         if(current.hour < hOpen) {
             t = hOpen;
@@ -38,7 +37,9 @@ function Time(props){
         setTime(prev => {
             return {...prev, hour : hours[0]}
         })
-    }, [current.hour])
+
+
+    console.log(hours);
 
     useEffect(() => {
         setTime(prev => {
@@ -51,7 +52,6 @@ function Time(props){
     const AmPm = () => {
 
         const ampmClick = () => {
-
             if(apClass === "toggle down"){
                 setApClass("toggle up");
                 console.log("up");
@@ -83,24 +83,26 @@ function Time(props){
             </span>
             <div>
                 <DropDown
+                    options={hours}
+                    selectedOp={time.hour}
+                    styleBtn = {dropdownBtn}
+                    styleSel = {dropdownSelected}
+                    handleClick={(hour) => {
+                        console.log("drop");
+                        setTime(prev => {
+                            return {...prev, hour: hour}
+                        });
+                    }}
+                />
+                <DropDown
                     options={minutes}
                     selectedOp={time.min}
                     styleBtn = {dropdownBtn}
                     styleSel = {dropdownSelected}
                     handleClick={(min) => {
+                        console.log("drop");
                         setTime(prev => {
                             return {...prev, min: min}
-                        });
-                    }}
-                />
-                <DropDown
-                    options={hours}
-                    styleBtn = {dropdownBtn}
-                    styleSel = {dropdownSelected}
-                    selectedOp={time.hour}
-                    handleClick={(hour) => {
-                        setTime(prev => {
-                            return {...prev, hour: hour}
                         });
                     }}
                 />

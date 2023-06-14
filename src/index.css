@@ -106,6 +106,7 @@ ul a:visited {
   display: flex;
   justify-content: center;
   align-content: center;
+  cursor: pointer;
 }
 
 .dropdown-selected {
@@ -116,10 +117,12 @@ ul a:visited {
 
 .dropdown-cnt {
   position: absolute;
+  z-index: 100;
   width: 100%;
   top : 110%;
   left: 0;
   filter: drop-shadow(1px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
 }
 
 .dropdown-cnt .dropdown-item {
