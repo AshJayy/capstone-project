@@ -46,19 +46,21 @@ function Time(props){
         });
     }, [minutes]);
 
-    const AmPm = () => {
+    const [apClass, setApClass] = useState("toggle down");
 
-        const [apClass, setApClass] = useState("toggle down");
+    const AmPm = () => {
 
         const ampmClick = () => {
 
             if(apClass === "toggle down"){
                 setApClass("toggle up");
+                console.log("up");
                 setTime((prev) => {
                     return {...prev, ampm: "am"};
                 });
             }else{
                 setApClass("toggle down");
+                console.log("down");
                 setTime((prev) => {
                     return {...prev, ampm: "pm"};
                 });

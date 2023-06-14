@@ -1,5 +1,4 @@
-import { useState} from "react";
-import classNames from "classnames";
+import { useMemo} from "react";
 
 function Date(props){
 
@@ -9,49 +8,9 @@ function Date(props){
         gap: "1em",
     }
 
-    const styleScroll = {
-        overflowX: "scroll",
-        scrollMargin: "6em",
-    }
-
     const DateCard = (p) => {
 
-        const [active, setActive] = useState(false);
-
         console.log("render");
-
-        // const styleCard = {
-        //     borderRadius: "16px",
-        //     padding: "0.5em 1em 0.5em 1em",
-        //     width: "fit-content",
-        //     display: "flex",
-        //     flexDirection: "column",
-        //     justifyContene: "center",
-        //     alignItems: "center",
-        //     gap: "0.25em"
-        // };
-
-        // const cardColor = classNames({
-        //     'bg-primary-light': !active,
-        //     'primary-dark': !active,
-        //     'bg-primary-dark': active,
-        //     'primary-light': active
-        // });
-
-        const handleClick = () => {
-            // if (active) {
-            //     setActive(false);
-            //     console.log("set false");
-            // }else{
-            //     setActive(true);
-            //     console.log("set true");
-            // }
-            // (active) ? isActive(false) : isActive(true);
-            console.log("1");
-            props.set.setDate(prev => {
-                return {...prev, month: p.month, date: p.date}
-            })
-        };
 
         return(
         <label>
@@ -68,17 +27,18 @@ function Date(props){
         );
     }
 
-    const cards = [...new Array(7)].map((a, i) => {
-            const d = props.current.plus({days: i});
-            return(
-                <DateCard
-                    key={i}
-                    month={d.toLocaleString({month: 'short'})}
-                    date={d.toLocaleString({day: 'numeric'})}
-                    day={d.toLocaleString({weekday: 'short'})}
-                />
-            );
-        });
+    const cards = useMemo(() => [...new Array(7)].map((a, i) => {
+        const d = props.current.plus({days: i});
+        return(
+            <DateCard
+                key={i}
+                month={d.toLocaleString({month: 'short'})}
+                date={d.toLocaleString({day: 'numeric'})}
+                day={d.toLocaleString({weekday: 'short'})}
+            />
+        );
+    }), [])
+
 
     return(
         <div id="date">
