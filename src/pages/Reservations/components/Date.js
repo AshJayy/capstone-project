@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import { useState} from "react";
+import classNames from "classnames";
 
 function Date(props){
 
@@ -10,44 +10,61 @@ function Date(props){
     }
 
     const styleScroll = {
-        "overflow-x": "scroll"
+        overflowX: "scroll",
+        scrollMargin: "6em",
     }
 
     const DateCard = (p) => {
 
-        const [cardColor, setCardColor] = useState("bg-primary-light primary-dark")
+        const [active, setActive] = useState(false);
 
-        const styleCard = {
-            borderRadius: "16px",
-            padding: "0.5em 1em 0.5em 1em",
-            width: "fit-content",
-            display: "flex",
-            flexDirection: "column",
-            justifyContene: "center",
-            alignItems: "center",
-            gap: "0.25em"
-        }
+        console.log("render");
+
+        // const styleCard = {
+        //     borderRadius: "16px",
+        //     padding: "0.5em 1em 0.5em 1em",
+        //     width: "fit-content",
+        //     display: "flex",
+        //     flexDirection: "column",
+        //     justifyContene: "center",
+        //     alignItems: "center",
+        //     gap: "0.25em"
+        // };
+
+        // const cardColor = classNames({
+        //     'bg-primary-light': !active,
+        //     'primary-dark': !active,
+        //     'bg-primary-dark': active,
+        //     'primary-light': active
+        // });
 
         const handleClick = () => {
-            cardColor === "bg-primary-light primary-dark" ?
-                setCardColor("bg-highlight-light black") :
-                setCardColor("bg-primary-light primary-dark")
+            // if (active) {
+            //     setActive(false);
+            //     console.log("set false");
+            // }else{
+            //     setActive(true);
+            //     console.log("set true");
+            // }
+            // (active) ? isActive(false) : isActive(true);
+            console.log("1");
             props.set.setDate(prev => {
-                return {...prev, month:p.month, date: p.date}
+                return {...prev, month: p.month, date: p.date}
             })
-        }
+        };
 
         return(
-            <div
-                role="button"
-                style={styleCard}
-                className={cardColor}
-                onClick={handleClick}
-            >
+        <label>
+            <input
+                type="radio"
+                name="date"
+            />
+            <div className="radio-div-content">
                 <p>{p.month}</p>
                 <h4>{p.date}</h4>
                 <p>{p.day}</p>
             </div>
+        </label>
         );
     }
 
@@ -64,11 +81,11 @@ function Date(props){
         });
 
     return(
-        <div>
+        <div id="date">
             <span>
                 <h4>Pick a date</h4>
             </span>
-            <div style={styleScroll}>
+            <div className="date-scroll">
                 <div style={styleMain}>
                     {cards}
                 </div>

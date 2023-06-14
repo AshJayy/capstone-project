@@ -20,6 +20,48 @@
     padding-bottom: 1em;
 }
 
+#date .date-scroll {
+    overflow-x: scroll;
+    scroll-margin: 6em;
+    scrollbar-color: hsl(150, 6%, 93%) hsl(160, 13%, 33%);
+    scrollbar-width: thin;
+}
+
+/* #date .date-scroll::-webkit-scrollbar-track {
+    background-color: hsl(150, 6%, 93%);
+}
+
+#date .date-scroll::-webkit-scrollbar-thumb{
+    background-color: red;
+} */
+
+#date label {
+    display: flex;
+}
+
+#date input {
+    visibility: hidden;
+    position: absolute;
+}
+
+#date label input + div {
+	cursor: pointer;
+    border-radius: 16px;
+    padding: 0.5em 1em 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    background-color: hsl(150, 6%, 93%);
+    color: hsl(160, 13%, 33%);
+}
+
+#date input:checked + div {
+    background-color: hsl(160, 13%, 33%);
+    color: hsl(150, 6%, 93%);
+}
+
 #time > div {
     overflow-y: visible;
     display: flex;
